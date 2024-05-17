@@ -1,24 +1,27 @@
-import java.util.Scanner;
+
+
+import javax.swing.JOptionPane;
 
 public class inicio {
     public static void main(String[] args) {
-
+        
 
 
         boolean entrada = true;
         while (entrada){
             int opt=0;
-            try (Scanner sc = new Scanner (System.in)) {
-                System.out.println("Bienvenido, seleccione una opcion para continuar");
-                System.out.println("1. Estudiante de ingenieria");
-                System.out.println("2. Estudiante de diseño");
-                System.out.println("3. Inventario total");
-                System.out.println("4. Salir");
-                opt=sc.nextInt();
-            }
+            StringBuilder mensaje = new StringBuilder();
+                mensaje.append("Bienvenido, seleccione una opcion para continuar").append("\n");
+                mensaje.append("1. Estudiante de ingenieria").append("\n");
+                mensaje.append("2. Estudiante de diseño").append("\n");
+                mensaje.append("3. Inventario total").append("\n");
+                mensaje.append("4. Salir").append("\n");
+                opt = (Integer.parseInt(JOptionPane.showInputDialog(null, mensaje.toString())));
+            
                 switch (opt) {
                     case 1:
-                        
+                        ingeniero menu =new ingeniero();
+                        menu.menu();
                         break;
                     
                     case 2:
