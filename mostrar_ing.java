@@ -17,6 +17,7 @@ public class mostrar_ing {
             mensaje.append("Semestre: ").append(est.getSemestre()).append("\n");
             mensaje.append("Promedio: ").append(est.getPromedio()).append("\n");
             mensaje.append("Serial: ").append(est.getSerial()).append("\n");
+            mensaje.append("\n");
         }
         JOptionPane.showMessageDialog(null, mensaje.toString(), "Lista de Prestamos", JOptionPane.INFORMATION_MESSAGE);
     }
