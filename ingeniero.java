@@ -44,7 +44,7 @@ public class ingeniero {
                     break;
                     
                     default:
-                        System.out.println("Opcion no valida, porfavor valide");
+                        System.out.println("Opcion no valida, por favor valide");
                         break;
                 }
         }
