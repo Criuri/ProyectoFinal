@@ -1,4 +1,5 @@
 import javax.swing.JOptionPane;
+import java.util.LinkedList;
 
 public class validaciones {
     public String digitos(String mensaje){
@@ -59,6 +60,24 @@ public class validaciones {
             }
         } while (dgt == null);
         return dgt;
+    }
+
+    public boolean ceduplicada(LinkedList<estudiante_ing> prestamos, String ce){
+        for (estudiante_ing e : prestamos) {
+            if (e.getCedula().equals(ce)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean serialdup(LinkedList<estudiante_ing> prestamos, String se){
+        for (estudiante_ing e : prestamos) {
+            if (e.getSerial().equals(se)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 

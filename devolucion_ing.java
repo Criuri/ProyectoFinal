@@ -7,11 +7,11 @@ public LinkedList<estudiante_ing> devolucion(LinkedList<estudiante_ing> prestamo
         JOptionPane.showMessageDialog(null, "La lista de prestamos está vacía.");
         return null;
     }
-    String cedula = JOptionPane.showInputDialog("Ingrese la cédula del estudiante a eliminar:");
+    String cs = JOptionPane.showInputDialog("Ingrese la cédula del estudiante o el serial del dispositivo del prestamo a eliminar:");
         estudiante_ing est=null;
 
         for (estudiante_ing e: prestamos){
-            if(e.getCedula().equals(cedula)){
+            if(e.getCedula().equals(cs) || e.getSerial().equals(cs)){
                 est=e;
             }
         }
