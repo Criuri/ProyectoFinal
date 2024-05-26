@@ -79,6 +79,24 @@ public class validaciones {
         }
         return false;
     }
+
+    public boolean ceduplicada_dis(LinkedList<estudiante_dis> prestamos_dis, String ce){
+        for (estudiante_dis d : prestamos_dis) {
+            if (d.getCedula().equals(ce)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean serialdup_dis(LinkedList<estudiante_dis> prestamos_dis, int se){
+        for (estudiante_dis d : prestamos_dis) {
+            if (d.getSerial() == se) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 
