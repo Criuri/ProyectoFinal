@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class registro_ing {
     public LinkedList<estudiante_ing> registro(LinkedList<estudiante_ing> prestamos){
          validaciones v=new validaciones();
-        String mensaje;
+        String mensaje, ce, se;
         int cant, sem;
 
         mensaje ="ingrese el numero de prestamos a ingresar";
@@ -13,9 +13,15 @@ public class registro_ing {
 
         for (int i = 0; i < cant; i++) {
             estudiante_ing e = new estudiante_ing(null, null, null, null, i, i, null);
-
-            mensaje = "Ingrese la cedula";
-            e.setCedula(v.digitos(mensaje));
+            do {
+                mensaje = "Ingrese la cedula";
+                ce=v.digitos(mensaje);
+                if(v.ceduplicada(prestamos, ce)){
+                    JOptionPane.showMessageDialog(null, "La cédula ya existe. Ingrese una cédula nueva.");
+                    ce = null;
+                }
+            } while (ce==null);
+            e.setCedula(ce);
             
             mensaje="Ingrese nombre";
             e.setNombre(v.letras(mensaje));
@@ -39,8 +45,16 @@ public class registro_ing {
             mensaje="ingrese el promedio";
             e.setPromedio(Float.parseFloat(v.flotante(mensaje)));
 
-            mensaje="Ingrese el serial de el equipo";
-            e.setSerial(v.letrasydigitos(mensaje));
+            
+            do {
+                mensaje="Ingrese el serial de el equipo";
+                se=v.letrasydigitos(mensaje);
+                if(v.serialdup(prestamos, se)){
+                    JOptionPane.showMessageDialog(null, "el serial ya esta ocupado. Elija un nuevo serial.");
+                    se = null;
+                }
+            } while (se==null);
+            e.setSerial(se);
 
             prestamos.add(e);
             
