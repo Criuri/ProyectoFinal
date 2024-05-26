@@ -14,7 +14,7 @@ public class inicio {
                 mensaje.append("Bienvenido, seleccione una opcion para continuar").append("\n");
                 mensaje.append("1. Estudiante de ingenieria").append("\n");
                 mensaje.append("2. Estudiante de diseño").append("\n");
-                mensaje.append("3. Inventario total").append("\n");
+                mensaje.append("3. Inventario").append("\n");
                 mensaje.append("4. Salir").append("\n");
                 opt = (Integer.parseInt(JOptionPane.showInputDialog(null, mensaje.toString())));
             
