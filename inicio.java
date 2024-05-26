@@ -25,7 +25,8 @@ public class inicio {
                         break;
                     
                     case 2:
-                        
+                        diseñador menud=new diseñador();
+                        menud.menu_dis();
                         break;
                 
                     case 3:
