@@ -5,7 +5,8 @@ public class portatil {
     private float Precio;
     private String Sistema;
     private String Procesador;
-    public portatil (String serial ,String marca, float tamaño,float precio, String sistema, String procesador) {
+    private int Estado;
+    public portatil (String serial ,String marca, float tamaño,float precio, String sistema, String procesador, int estado) {
 
         Serial = serial;
         Marca = marca;
@@ -13,8 +14,10 @@ public class portatil {
         Precio = precio;
         Sistema = sistema;
         Procesador = procesador;
+        Estado=estado;
 
     }
+    
     public String getSerial() {
         return Serial;
     }
@@ -50,5 +53,11 @@ public class portatil {
     }
     public void setProcesador(String procesador) {
         Procesador = procesador;
+    }
+    public int getEstado() {
+        return Estado;
+    }
+    public void setEstado(int estado) {
+        Estado = estado;
     }
 }

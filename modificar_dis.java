@@ -13,17 +13,18 @@ public class modificar_dis {
             return null;
         }
         String cs = JOptionPane.showInputDialog("Para modificar la información, ingrese la cédula del estudiante o el serial del equipo:");
-        if(cs==null){
-            s=0;
-        } else{
-            s=Integer.parseInt(cs);
-        }
         estudiante_dis est=null;
 
-        for (estudiante_dis e: prestamos_dis){
-            if(e.getCedula().equals(cs) || e.getSerial() == s){
-                est=e;
-            } 
+        try {
+            s= Integer.parseInt(cs);
+            for (estudiante_dis e: prestamos_dis){
+                if(e.getCedula().equals(cs) || e.getSerial() == s){
+                    est=e;
+                } 
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "El valor ingresado no es valido.");
+            return prestamos_dis;
         }
 
         if (est !=null){

@@ -29,16 +29,7 @@ public class mostrar_ing {
             JOptionPane.showMessageDialog(null, mensaje.toString(), "Prestamo encontrado", JOptionPane.INFORMATION_MESSAGE);
 
         } else if (est==null) {
-            for (estudiante_ing stu : prestamos) {
-                mensaje.append("Cedula: ").append(stu.getCedula()).append("\n");
-                mensaje.append("Nombre: ").append(stu.getNombre()).append("\n");
-                mensaje.append("Apellido: ").append(stu.getApellido()).append("\n");
-                mensaje.append("Telefono: ").append(stu.getTelefono()).append("\n");
-                mensaje.append("Semestre: ").append(stu.getSemestre()).append("\n");
-                mensaje.append("Promedio: ").append(stu.getPromedio()).append("\n");
-                mensaje.append("Serial: ").append(stu.getSerial()).append("\n");
-                mensaje.append("\n");
-            }
+             mensaje.append("Prestamo no encontrado, favor valide:");
             JOptionPane.showMessageDialog(null, mensaje.toString(), "Lista de Prestamos", JOptionPane.INFORMATION_MESSAGE);
         }
         

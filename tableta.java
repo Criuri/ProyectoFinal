@@ -5,7 +5,8 @@ public class tableta {
     private float Precio;
     private String Almacenamiento;
     private float Peso;
-    public tableta (String serial ,String marca, float tamaño,float precio, String almacenamiento, float peso) {
+    private int Estado;
+    public tableta (String serial ,String marca, float tamaño,float precio, String almacenamiento, float peso, int estado) {
 
         Serial = serial;
         Marca = marca;
@@ -13,6 +14,7 @@ public class tableta {
         Precio = precio;
         Almacenamiento = almacenamiento;
         Peso = peso;
+        Estado = estado;
 
     }
     public String getSerial() {
@@ -50,5 +52,11 @@ public class tableta {
     }
     public void setPeso(float peso) {
         Peso = peso;
+    }
+    public float getEstado() {
+        return Peso;
+    }
+    public void setEstado(int estado) {
+        Estado = estado;
     }
 }
