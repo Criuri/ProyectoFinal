@@ -8,7 +8,7 @@ public class mostrar_ing {
         if(prestamos.isEmpty()){
             JOptionPane.showMessageDialog(null, "La lista de prestamos está vacía.");
             return;
-        }
+        } else{
         String cs = JOptionPane.showInputDialog("Para buscar la información de un prestamo en concreto, ingrese la cédula del estudiante o el serial del equipo:");
         estudiante_ing est=null;
 
@@ -34,4 +34,5 @@ public class mostrar_ing {
         }
         
     }
+}
 }

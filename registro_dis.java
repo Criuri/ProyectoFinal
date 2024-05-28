@@ -12,7 +12,7 @@ public class registro_dis {
         cant = Integer.parseInt(v.digitos(mensaje));
 
         for (int i = 0; i < cant; i++) {
-            estudiante_dis d = new estudiante_dis(null, null, null, null, null, i, i);
+            estudiante_dis d = new estudiante_dis(null, null, null, null, null, 0, 0);
             do {
                 mensaje = "Ingrese la cedula";
                 ce=v.digitos(mensaje);
