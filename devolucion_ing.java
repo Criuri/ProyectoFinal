@@ -6,7 +6,7 @@ public LinkedList<estudiante_ing> devolucion(LinkedList<estudiante_ing> prestamo
     if(prestamos.isEmpty()){
         JOptionPane.showMessageDialog(null, "La lista de prestamos está vacía.");
         return null;
-    }
+    } else {
     String cs = JOptionPane.showInputDialog("Ingrese la cédula del estudiante o el serial del dispositivo del prestamo a eliminar:");
         estudiante_ing est=null;
 
@@ -23,5 +23,6 @@ public LinkedList<estudiante_ing> devolucion(LinkedList<estudiante_ing> prestamo
             JOptionPane.showMessageDialog(null, "Estudiante no encontrado.");
         }
     return prestamos;
+    }
 }
 }

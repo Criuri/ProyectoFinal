@@ -11,7 +11,7 @@ public class modificar_dis {
         if(prestamos_dis.isEmpty()){
             JOptionPane.showMessageDialog(null, "La lista de prestamos está vacía.");
             return null;
-        }
+        } else {
         String cs = JOptionPane.showInputDialog("Para modificar la información, ingrese la cédula del estudiante o el serial del equipo:");
         estudiante_dis est=null;
 
@@ -115,5 +115,6 @@ public class modificar_dis {
             JOptionPane.showMessageDialog(null, "Prestamo no encontrado.");
         }
         return prestamos_dis;
+    }
     }
 }

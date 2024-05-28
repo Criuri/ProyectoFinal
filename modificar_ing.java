@@ -10,7 +10,7 @@ public class modificar_ing {
         if(prestamos.isEmpty()){
             JOptionPane.showMessageDialog(null, "La lista de prestamos está vacía.");
             return null;
-        }
+        } else {
         String cs = JOptionPane.showInputDialog("Para modificar la información, ingrese la cédula del estudiante o el serial del equipo:");
         estudiante_ing est=null;
 
@@ -112,5 +112,6 @@ public class modificar_ing {
             JOptionPane.showMessageDialog(null, "Prestamo no encontrado.");
         }
         return prestamos;
+    }
     }
 }

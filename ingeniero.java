@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class ingeniero {
     public void menu(){
         LinkedList<estudiante_ing> prestamos = new LinkedList<>();
-
+        validaciones v=new validaciones();
         boolean entrada = true;
         while (entrada){
             int opt=0;
@@ -16,7 +16,7 @@ public class ingeniero {
                 mensaje.append("3. Devolucion de dispositivo").append("\n");
                 mensaje.append("4. Mostrar registros de prestamo").append("\n");
                 mensaje.append("5. Salir al menu inicial").append("\n");
-                opt = (Integer.parseInt(JOptionPane.showInputDialog(null, mensaje.toString())));
+                opt = (Integer.parseInt(v.menu(mensaje)));
             
                 switch (opt) {
                     case 1:
@@ -44,7 +44,7 @@ public class ingeniero {
                     break;
                     
                     default:
-                        System.out.println("Opcion no valida, por favor valide");
+                        JOptionPane.showMessageDialog(null, "el valor ingresado es invalido, favor valide");
                         break;
                 }
         }
