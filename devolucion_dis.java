@@ -8,7 +8,7 @@ public class devolucion_dis {
     if(prestamos_dis.isEmpty()){
         JOptionPane.showMessageDialog(null, "La lista de prestamos está vacía.");
         return null;
-    }
+    } else {
     String cs = JOptionPane.showInputDialog("Ingrese la cédula del estudiante o el serial del dispositivo del prestamo a eliminar:");
         estudiante_dis est=null;
 
@@ -31,5 +31,6 @@ public class devolucion_dis {
             JOptionPane.showMessageDialog(null, "Estudiante no encontrado.");
         }
     return prestamos_dis;
+    }
 }
 }

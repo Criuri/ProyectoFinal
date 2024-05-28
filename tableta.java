@@ -54,7 +54,7 @@ public class tableta {
         Peso = peso;
     }
     public float getEstado() {
-        return Peso;
+        return Estado;
     }
     public void setEstado(int estado) {
         Estado = estado;
