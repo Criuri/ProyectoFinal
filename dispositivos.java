@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 public class dispositivos {
     public void dispo_menu(){
+        validaciones v=new validaciones();
         LinkedList<tableta> tabletas = new LinkedList<>();
         LinkedList<portatil> portatiles = new LinkedList<>();
 
@@ -16,7 +17,7 @@ public class dispositivos {
                 mensaje.append("2. Tabletas").append("\n");
                 mensaje.append("3. Inventario").append("\n");
                 mensaje.append("4. Salir al menu inicial").append("\n");
-                opt = (Integer.parseInt(JOptionPane.showInputDialog(null, mensaje.toString())));
+                opt = (Integer.parseInt(v.menu(mensaje)));
             
                 switch (opt) {
                     case 1:
@@ -39,9 +40,10 @@ public class dispositivos {
                         break;
 
                     default:
-                        System.out.println("Opcion no valida, por favor valide");
+                        JOptionPane.showMessageDialog(null, "el valor ingresado es invalido, favor valide");
                         break;
                 }
         }
+        return;
     }
 }

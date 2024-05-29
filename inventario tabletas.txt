@@ -1,0 +1,23 @@
+serial: 837663
+marca: toshiba
+tamaño: 17
+precio: 200
+almacenamiento: 512 GB
+peso: 20
+estado: 1
+
+serial: 78236
+marca: samsung
+tamaño: 20
+precio: 350
+almacenamiento: 256 GB
+peso: 30
+estado: 1
+
+serial: 982346
+marca: xiaomi
+tamaño: 22
+precio: 450
+almacenamiento: 1 TB
+peso: 25
+estado: 1
