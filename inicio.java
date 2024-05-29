@@ -14,8 +14,13 @@ public class inicio {
                 mensaje.append("2. Estudiante de diseño").append("\n");
                 mensaje.append("3. Dispositivos").append("\n");
                 mensaje.append("4. Salir").append("\n");
-                opt = (Integer.parseInt(v.menu(mensaje)));
-            
+                
+                try { 
+
+                    opt = (Integer.parseInt(v.menu(mensaje)));
+
+                    } catch (NumberFormatException e) {}
+
                 switch (opt) {
                     case 1:
                         ingeniero menu =new ingeniero();

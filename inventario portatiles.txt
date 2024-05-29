@@ -1,0 +1,23 @@
+serial:xtv765
+marca: Samsung
+tamaño: 15.0
+precio: 355
+sistema: Windows 7
+procesador: Intel® Core™ i5
+estado: 1
+
+serial: msi654525
+marca: msi
+tamaño: 16
+precio: 700
+sistema: Windows 10
+procesador: AMD Ryzen
+estado: 1
+
+serial: hp453
+marca: hp
+tamaño: 17.0
+precio: 455
+sistema: Windows 11
+procesador: AMD Ryzen
+estado: 1

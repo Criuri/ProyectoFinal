@@ -1,0 +1,15 @@
+cedula : 9384737
+nombre : juan
+apellido : zapata
+telefono : 98457894
+modalidad : presencial
+asignaturas : 4
+serial : 897362
+
+cedula : 43521471
+nombre : sebastian
+apellido : leon
+telefono : 98457894
+modalidad : presencial
+asignaturas : 2
+serial : 36764987
