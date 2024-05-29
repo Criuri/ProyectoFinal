@@ -15,8 +15,10 @@ public class tablets_reg {
                 mensaje1.append("Elija una opcion para proceder").append("\n");
                 mensaje1.append("1. Importar archivo .txt").append("\n");
                 mensaje1.append("2. ingresar de manera manual").append("\n");
+                mensaje1.append("3. Regresar al menu").append("\n");
+                try { 
                 opt = (Integer.parseInt(v.opt(mensaje1)));
-            
+            } catch (NumberFormatException e) {}
                 switch (opt) {
                     case 1:
                             importar_tableta imp=new importar_tableta();
@@ -59,7 +61,10 @@ public class tablets_reg {
                 mensaje2.append("2. 512 GB").append("\n");
                 mensaje2.append("3. 1 TB").append("\n");
                 mensaje2.append("4. No establecer almacenamiento").append("\n");
-                opt = (Integer.parseInt(v.opt(mensaje2)));
+
+                try { 
+                opt2 = (Integer.parseInt(v.opt(mensaje2)));
+                } catch (NumberFormatException e) {}
             
                 switch (opt2) {
                     case 1:
@@ -103,6 +108,11 @@ public class tablets_reg {
             tabletas.add(t);
     }
                     entrada = false;
+                        break;
+
+                        case 3:
+
+                        entrada = false;
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "el valor ingresado es invalido, favor valide");
