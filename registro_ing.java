@@ -65,6 +65,8 @@ public class registro_ing {
                         e.setPromedio(Float.parseFloat(v.flotante(mensaje)));
             
                         
+            
+
                         do {
                             mensaje="Ingrese el serial de el equipo";
                             se=v.letrasydigitos(mensaje);
@@ -73,6 +75,7 @@ public class registro_ing {
                                 se = null;
                             }
                         } while (se==null);
+
                         e.setSerial(se);
             
                         prestamos.add(e);
