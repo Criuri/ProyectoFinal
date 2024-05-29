@@ -47,7 +47,7 @@ public class portatil_view {
                             mensaje.append("Procesador: ").append(port.getProcesador()).append("\n");
                             mensaje.append("Estado: ").append(port.getEstado()).append("\n");
                             mensaje.append("\n");
-                            JOptionPane.showMessageDialog(null, mensaje.toString(), "Equiopo encontrado", JOptionPane.INFORMATION_MESSAGE);
+                            JOptionPane.showMessageDialog(null, mensaje.toString(), "Equipo encontrado", JOptionPane.INFORMATION_MESSAGE);
                 
                         } else if (port==null) {
                             mensaje.append("Prestamo no encontrado, favor valide:");
@@ -67,7 +67,7 @@ public class portatil_view {
                             mensaje3.append("Estado: ").append(p.getEstado()).append("\n");
                             mensaje3.append("\n");
                         }
-                        JOptionPane.showMessageDialog(null, mensaje3.toString(), "Lista de prestamos", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, mensaje3.toString(), "Lista de portatiles", JOptionPane.INFORMATION_MESSAGE);
 
                         break;
 
