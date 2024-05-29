@@ -14,14 +14,16 @@ public class portatil_reg {
             StringBuilder mensaje1 = new StringBuilder();
                 mensaje1.append("Elija una opcion para proceder").append("\n");
                 mensaje1.append("1. Importar archivo .txt").append("\n");
-                mensaje1.append("2. ingresar de manera manual").append("\n");
+                mensaje1.append("2. Ingresar de manera manual").append("\n");
+                mensaje1.append("3. Regresar al menu").append("\n");
+                try { 
                 opt = (Integer.parseInt(v.opt(mensaje1)));
+            } catch (NumberFormatException e) {}
             
                 switch (opt) {
                     case 1:
                             importar_portatil imp=new importar_portatil();
                             imp.importarPortatil("inventario portatiles.txt", portatiles);
-                        entrada = false;
                         break;
                     
                     case 2:
@@ -59,8 +61,9 @@ public class portatil_reg {
                 mensaje2.append("2. Windows 10").append("\n");
                 mensaje2.append("3. Windows 11").append("\n");
                 mensaje2.append("4. linux").append("\n");
-                opt = (Integer.parseInt(v.opt(mensaje2)));
-            
+                try { 
+                opt1 = (Integer.parseInt(v.opt(mensaje2)));
+            } catch (NumberFormatException e) {}
                 switch (opt1) {
                     case 1:
                         p.setSistema("Windows 7");
@@ -94,8 +97,9 @@ public class portatil_reg {
                 mensaje2.append("Elija el procesadoe del equipo").append("\n");
                 mensaje2.append("1. AMD Ryzen").append("\n");
                 mensaje2.append("2. Intel® Core™ i5.").append("\n");
-                opt = (Integer.parseInt(v.opt(mensaje2)));
-            
+                try { 
+                opt2 = (Integer.parseInt(v.opt(mensaje2)));
+            } catch (NumberFormatException e) {}
                 switch (opt2) {
                     case 1:
                         p.setProcesador("AMD Ryzen");
@@ -125,8 +129,12 @@ public class portatil_reg {
 
             portatiles.add(p);
     }
+    break;
+                    case 3:
+
                     entrada = false;
-                        break;
+                    break;
+
                     default:
                         JOptionPane.showMessageDialog(null, "el valor ingresado es invalido, favor valide");
                         break;

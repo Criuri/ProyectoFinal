@@ -16,8 +16,9 @@ public class registro_dis {
                 mensaje2.append("1. Importar archivo .txt").append("\n");
                 mensaje2.append("2. Ingresar de manera manual").append("\n");
                 mensaje2.append("3. Regresar al menu").append("\n");
+                try {
                 opt = (Integer.parseInt(v.opt(mensaje2)));
-            
+            } catch (NumberFormatException e) {}
                 switch (opt) {
                     case 1:
                             importar_dis imp=new importar_dis();
