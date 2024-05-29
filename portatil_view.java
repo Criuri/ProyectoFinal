@@ -19,8 +19,9 @@ public class portatil_view {
                     mensaje2.append("2. Mostrar todo el inventario de tabletas registradas").append("\n");
                     mensaje2.append("3. Exportar el inventario de tabletas").append("\n");
                     mensaje2.append("4. regresar al menu").append("\n");
+                    try {
                     opt = (Integer.parseInt(v.opt(mensaje2)));
-                
+                } catch (NumberFormatException e) {}
                     switch (opt) {
                         case 1:
 
@@ -53,6 +54,7 @@ public class portatil_view {
                             mensaje.append("Prestamo no encontrado, favor valide:");
                             JOptionPane.showMessageDialog(null, mensaje.toString(), "Lista de equipos", JOptionPane.INFORMATION_MESSAGE);
                         }
+                        break;
 
                         case 2:
 
