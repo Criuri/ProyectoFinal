@@ -8,7 +8,25 @@ public class tablets_reg {
         String mensaje, se;
         int cant,  ce;
 
-        mensaje ="ingrese el numero de tabletas a ingresar";
+        boolean entrada = true;
+        while (entrada){
+            int opt=0;
+            StringBuilder mensaje1 = new StringBuilder();
+                mensaje1.append("Elija una opcion para proceder").append("\n");
+                mensaje1.append("1. Importar archivo .txt").append("\n");
+                mensaje1.append("2. ingresar de manera manual").append("\n");
+                opt = (Integer.parseInt(v.opt(mensaje1)));
+            
+                switch (opt) {
+                    case 1:
+                            importar_tableta imp=new importar_tableta();
+                            imp.importarTableta("inventario tabletas.txt", tabletas);
+                        entrada = false;
+                        break;
+                    
+                    case 2:
+
+                    mensaje ="ingrese el numero de tabletas a ingresar";
         cant = Integer.parseInt(v.digitos(mensaje));
 
         for (int i = 0; i < cant; i++) {
@@ -32,9 +50,9 @@ public class tablets_reg {
             mensaje = "Ingrese el precio";
             t.setPrecio(Float.parseFloat(v.flotante(mensaje)));
 
-            boolean entrada = true;
-        while (entrada){
-            int opt=0;
+            boolean entrada2 = true;
+        while (entrada2){
+            int opt2=0;
             StringBuilder mensaje2 = new StringBuilder();
                 mensaje2.append("Elija el almacenamiento del dispositivo").append("\n");
                 mensaje2.append("1. 256 GB").append("\n");
@@ -43,25 +61,25 @@ public class tablets_reg {
                 mensaje2.append("4. No establecer almacenamiento").append("\n");
                 opt = (Integer.parseInt(v.opt(mensaje2)));
             
-                switch (opt) {
+                switch (opt2) {
                     case 1:
                         t.setAlmacenamiento("256 GB");
-                        entrada = false;
+                        entrada2 = false;
                         break;
                     
                     case 2:
                         t.setAlmacenamiento("512 GB");
-                        entrada = false;
+                        entrada2 = false;
                         break;
                 
                     case 3:
                         t.setAlmacenamiento("1 TB");
-                        entrada = false;
+                        entrada2 = false;
                         break;
 
                     case 4:
                         t.setAlmacenamiento("No Establecido");
-                        entrada = false;
+                        entrada2 = false;
                         break;
                     
                     default:
@@ -84,6 +102,14 @@ public class tablets_reg {
 
             tabletas.add(t);
     }
+                    entrada = false;
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "el valor ingresado es invalido, favor valide");
+                        break;
+                }
+        }
+
     return tabletas;
     }
 }

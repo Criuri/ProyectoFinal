@@ -1,0 +1,23 @@
+cedula : 456637
+nombre : Ronald
+apellido : Lopez
+telefono : 64576546
+semestre : 4
+promedio : 5.0
+serial : tvl763
+
+cedula : 98983467
+nombre : Igor
+apellido : Garcia
+telefono : 097663
+semestre : 6
+promedio : 4.5
+serial : 99fds6y
+
+cedula : 736482
+nombre : Camila
+apellido : Herrera
+telefono : 67637949
+semestre : 2
+promedio : 3.0
+serial : fjso876

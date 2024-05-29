@@ -16,7 +16,10 @@ public class diseñador {
                 mensaje.append("3. Devolucion de dispositivo").append("\n");
                 mensaje.append("4. Mostrar registros de prestamo").append("\n");
                 mensaje.append("5. Salir al menu inicial").append("\n");
+
+                try {
                 opt = (Integer.parseInt(v.menu(mensaje)));
+                } catch (NumberFormatException e) {}
             
                 switch (opt) {
                     case 1:
